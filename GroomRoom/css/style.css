@@ -1,0 +1,402 @@
+/* общие стили */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+a:hover, .logout:hover{
+	transition: .6s;
+	color: #3f48cc;
+}
+.title {
+    font-size: 20pt;
+    border-bottom: 2px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+/* конец общих стилей */
+
+/* хедер */
+header {
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;  
+    box-shadow: 0px 0px 51px 6px rgba(34, 60, 80, 0.17);
+}
+.logo_conteiner {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid #00000014;
+}
+.logo_img {
+    margin-right: 50px;
+}
+.logo_name {
+    font-size: 40pt;
+    font-weight: bold;
+    color: #3f48cc;
+}
+.menu_container {
+    width: 100%;
+    padding: 20px;
+    font-size: 17pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.menu_item {
+    padding: 0 20px 0 20px;
+    font-weight: 500;
+}
+.header_form {
+    margin: 0;
+}
+.logout {
+    padding: 0 20px 0 20px;
+    font-weight: 500;
+    font-size: 17pt;
+    width: fit-content;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+/* конец стилей хедера */
+
+/* основной раздел */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    /* растягивает main по доступной высоте на экране, при этом body флексит */
+    flex-grow: 1;
+}
+.application_container {
+    width: 70%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.count {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 14pt;
+    margin: 50px 0 30px 0;
+    text-align: center;
+}
+.applications {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    width: 100%;
+}
+.app {
+    background-color: white;
+    border: 1px solid #594c5d1c;
+    margin: 10px;
+    padding: 10px;
+}
+.img_app {
+    width: 250px;
+}
+.name_app {
+    font-size: 14pt;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+}
+.category {
+    text-align: center;
+}
+.time {
+    text-align: end;
+    color: rgba(0, 0, 0, 0.76);
+    margin: 10px;
+}
+/* конец основного раздела */
+
+
+/* регистрация и авторизация */
+.form_container {
+    width: 70%;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+input {
+    width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
+.submit {
+    background-color: #3f48cc;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+.submit:hover {
+    background-color: #282f86;
+    transition: .6s;
+
+}
+.privacy {
+    width: fit-content;
+}
+/* конец рег и авто */
+
+
+/* футер */
+footer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+/* конец футера */
+
+
+
+
+/* страница пользователя */
+.form_container_app {
+    width: 70%;
+    padding: 50px 0 0 0;
+}
+form textarea {
+    width: 500px;    
+    height: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14pt;
+    resize: none;
+}
+.del_app {
+    border: 1px solid rgb(173, 0, 0);
+    width: fit-content;
+    height: fit-content;
+    padding:  5px 10px;
+    color: rgb(173, 0, 0);
+    display: flex;
+    align-self: flex-end;
+}
+.del_app:hover {
+    background-color: rgb(173, 0, 0);
+    color: white;
+}
+.apps_user {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#sort_all {
+    display: flex;
+}
+.img_app_user {
+    margin-right: 50px;
+    height: fit-content;
+}
+.app_user {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+.desc {
+    width: 400px;
+    margin-top: 10px;
+}
+.status {
+    font-size: 14pt;
+    font-weight: 500;
+	color: #282f86;
+}
+.name_app_user, .category_user, .time_user {
+    text-align: start;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: unset;
+}
+.sort {
+    width: 70%;
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sort button {
+    font-size: 14pt;
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+}
+.sort button:hover {
+	transition: .6s;
+	color: #3f48cc;
+}
+/* конец страницы пользователя */
+
+
+/* страница администратора */
+.change_status_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 0 300px;
+}
+.status_process_container input, .status_done_container textarea, .status_done_container input {
+    width: 300px;
+    font-size: 16px;
+}
+select {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0 0 0;
+
+}
+/* конец страницы администратора */
+
+
+
+/* адаптив */
+@media screen and (max-width: 375px) {
+    /* главная страница */
+    .menu_container, .logout {
+        font-size: 12pt;
+    }
+    .logo_img {
+        width: 50px;
+        margin-right: 30px;
+    }
+    .logo_name {
+        font-size: 25pt;
+    }
+    .title {
+        font-size: 17pt;
+    }
+    .application_container, .form_container {
+        width: 90%;
+    }
+    .count {
+        margin: 30px 0;
+    }
+    .img_app, input {
+        width: 200px;
+    }
+    input {
+        width: 100%;
+    }
+    /* конец глав стр */
+
+    /* страница пользователя */
+    .form_container_app {
+        width: 90%;
+    }
+    .form_container_app form textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+    .form_container_app form input {
+        font-size: 16px;
+    }
+    .sort {
+        width: 100%;
+    }
+    .sort button {
+        font-size: 16px;
+        padding: 0;
+        width: 80px;
+    }
+    .app_user {
+        flex-direction: column;
+        width: 90%;
+    }
+    .img_app_user {
+        margin: 0;
+        align-self: center;
+    }
+    .app_user .app_text {
+        width: 100%;
+    }
+    .app_user .app_text .desc {
+        width: 100%;
+    }
+    .del_app {
+        margin: 10px 0;
+        align-self: center;
+    }
+    .status {
+        margin: 10px 0 0 0;
+    }
+    /* конец стр польз */
+
+    /* страница админа */
+    .change_status_container {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    select {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .status_process_container input, .status_done_container textarea, .status_done_container input {
+        width: 100%;
+    }
+    .status_done_container {
+        width: 100%;
+
+    }
+    .status_process_container {
+        width: 100%;
+        margin: 0;
+    }
+    /* конец стр админа */
+}
+/* конец адаптива */
+
+/* подключение шрифтов */
+/* @font-face{
+    font-family: 'RussianRoad';
+    src: url('../fonts/RussianRoad.otf');
+} */
